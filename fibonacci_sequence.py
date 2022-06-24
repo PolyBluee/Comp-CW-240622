@@ -13,28 +13,35 @@ if start_cmd == 'r':
     time.sleep(2)
     print("")
     print("")
-    t = int(input("How many terms would you like to generate? > "))
+    
+    def fib(n):
 
-    
-    n1, n2 = 0, 1
-    count = 0
+        a=0
+        b=1
 
-    if t <= 0:
-        print("Expected: Positive Integer.")
-    
-    elif t == 1:
-            print("Fibonacci sequence upto: ",t,":")
-            print(n1)
-    
-    else:
-        print("Fibonacci sequence:")
-        while count < t:
-            print(n1)
-            nth = n1 + n2
+        if fibn == 1:
+            print(a)
+        
+        elif fibn<1:
+            print("Expected positive integer.")
+
+        else:
+            print(a)
+            print(b)
+
+
+            for i in range(2,n):
+
+                c=a+b
+                a=b
+                b=c
             
-            n1 = n2
-            n2 = nth
-            count += 1
+                print(c)
+    
+    fibn = int(input("How many would you like to generate? > "))
+    fib(fibn)
+    
+
 
 else:
     print("Incorrect argument! Closing...")
